@@ -40,7 +40,7 @@ public class User extends BaseEntity implements UserDetails {
     )
     private List<Role> roles;
 
-    // 🔴 THIS WAS THE BUG — NOW FIXED
+    
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return roles.stream()
